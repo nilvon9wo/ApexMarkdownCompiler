@@ -1,4 +1,4 @@
-public enum MKDN_TokenTypeEnum {
+public enum MKDN_TKN_TokenTypeEnum {
     EOF,
     NEWLINE,
     STAR,

@@ -11,10 +11,10 @@ public class MKDN_LEX_SimpleScanner implements MKDN_LEX_ScannerIntf {
     	return INSTANCE; 
     }
     
-    private static final Map<String, MKDN_TokenTypeEnum> CHARACTER_TO_TYPE_MAP = new Map<String, MKDN_TokenTypeEnum>{
-    	'_' => MKDN_TokenTypeEnum.UNDERSCORE,
-    	'*' => MKDN_TokenTypeEnum.STAR,
-    	'\n' => MKDN_TokenTypeEnum.NEWLINE
+    private static final Map<String, MKDN_TKN_TokenTypeEnum> CHARACTER_TO_TYPE_MAP = new Map<String, MKDN_TKN_TokenTypeEnum>{
+    	'_' => MKDN_TKN_TokenTypeEnum.UNDERSCORE,
+    	'*' => MKDN_TKN_TokenTypeEnum.STAR,
+    	'\n' => MKDN_TKN_TokenTypeEnum.NEWLINE
     }; 
     
     public MKDN_TKN_Token fromString(String plainMarkdown) {
@@ -22,7 +22,7 @@ public class MKDN_LEX_SimpleScanner implements MKDN_LEX_ScannerIntf {
     	try {
     		return new MKDN_TKN_Token(CHARACTER_TO_TYPE_MAP.get(character), character);
     	}
-    	catch (MKDN_InvalidTokenException ex) {
+    	catch (MKDN_TKN_InvalidTokenException ex) {
     		return MKDN_TKN_NullToken.getInstance();
     	}
     }    

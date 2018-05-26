@@ -20,9 +20,9 @@ public class MKDN_LEX_TextScanner implements MKDN_LEX_ScannerIntf  {
     
     public MKDN_TKN_Token fromString(String plainMarkdown) {
     	try {
-    		return new MKDN_TKN_Token(MKDN_TokenTypeEnum.TEXT, extractText(plainMarkdown));
+    		return new MKDN_TKN_Token(MKDN_TKN_TokenTypeEnum.TEXT, extractText(plainMarkdown));
     	}
-    	catch (MKDN_InvalidTokenException ex) {
+    	catch (MKDN_TKN_InvalidTokenException ex) {
     		return MKDN_TKN_NullToken.getInstance();
     	}
     }
