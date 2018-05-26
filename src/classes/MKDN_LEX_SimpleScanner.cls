@@ -1,12 +1,12 @@
-public class MKDN_SCN_SimpleScanner implements MKDN_SCN_ScannerIntf {
-	private static MKDN_SCN_SimpleScanner INSTANCE;
+public class MKDN_LEX_SimpleScanner implements MKDN_LEX_ScannerIntf {
+	private static MKDN_LEX_SimpleScanner INSTANCE;
 	
-    private MKDN_SCN_SimpleScanner(){
+    private MKDN_LEX_SimpleScanner(){
     }
     
-    public static MKDN_SCN_SimpleScanner getInstance() {
+    public static MKDN_LEX_SimpleScanner getInstance() {
     	if (INSTANCE == null) {
-    		INSTANCE = new MKDN_SCN_SimpleScanner();
+    		INSTANCE = new MKDN_LEX_SimpleScanner();
     	} 
     	return INSTANCE; 
     }

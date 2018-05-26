@@ -1,3 +1,3 @@
-public interface MKDN_SCN_ScannerIntf {
+public interface MKDN_LEX_ScannerIntf {
     MKDN_TKN_Token fromString(String plainMarkdown);
 }

@@ -1,19 +1,19 @@
-public class MKDN_SCN_TextScanner implements MKDN_SCN_ScannerIntf  {
-	MKDN_SCN_SimpleScanner simpleScanner;
+public class MKDN_LEX_TextScanner implements MKDN_LEX_ScannerIntf  {
+	MKDN_LEX_SimpleScanner simpleScanner;
 	
-	private static MKDN_SCN_TextScanner INSTANCE;
+	private static MKDN_LEX_TextScanner INSTANCE;
 	
-    private MKDN_SCN_TextScanner(MKDN_SCN_SimpleScanner simpleScanner){
+    private MKDN_LEX_TextScanner(MKDN_LEX_SimpleScanner simpleScanner){
     	this.simpleScanner = simpleScanner;
     }
 
-    private MKDN_SCN_TextScanner(){
-    	this(MKDN_SCN_SimpleScanner.getInstance());
+    private MKDN_LEX_TextScanner(){
+    	this(MKDN_LEX_SimpleScanner.getInstance());
     }
     
-    public static MKDN_SCN_TextScanner getInstance() {
+    public static MKDN_LEX_TextScanner getInstance() {
     	if (INSTANCE == null) {
-    		INSTANCE = new MKDN_SCN_TextScanner();
+    		INSTANCE = new MKDN_LEX_TextScanner();
     	} 
     	return INSTANCE; 
     }

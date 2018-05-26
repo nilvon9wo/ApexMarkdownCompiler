@@ -2,16 +2,16 @@
 public class MKDN_Tokenizer {
 	private static MKDN_Tokenizer INSTANCE;
 	
-	List<MKDN_SCN_ScannerIntf> scannerList;
+	List<MKDN_LEX_ScannerIntf> scannerList;
     
-    private MKDN_Tokenizer(List<MKDN_SCN_ScannerIntf> scannerList) {
+    private MKDN_Tokenizer(List<MKDN_LEX_ScannerIntf> scannerList) {
     	this.scannerList = scannerList;
     }
     
     private MKDN_Tokenizer() {
-    	this(new List<MKDN_SCN_ScannerIntf>{
-    		MKDN_SCN_SimpleScanner.getInstance(), 
-    		MKDN_SCN_TextScanner.getInstance()
+    	this(new List<MKDN_LEX_ScannerIntf>{
+    		MKDN_LEX_SimpleScanner.getInstance(), 
+    		MKDN_LEX_TextScanner.getInstance()
     	});
     }
     
@@ -41,7 +41,7 @@ public class MKDN_Tokenizer {
     }
     
     private MKDN_TKN_Token scanOneToken(String plainMarkdown) {
-    	for (MKDN_SCN_ScannerIntf scanner : scannerList) {
+    	for (MKDN_LEX_ScannerIntf scanner : scannerList) {
     		MKDN_TKN_Token token = scanner.fromString(plainMarkdown);
     		if (!token.isNull()) {
     			return token;
