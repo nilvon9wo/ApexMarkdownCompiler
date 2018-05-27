@@ -1,5 +1,5 @@
 public class MKDN_ND_ParagraphNode extends MKDN_ND_Node {
-    List<MKDN_ND_Node> sentenceList;
+    public List<MKDN_ND_Node> sentenceList {get; private set;}
     
     public MKDN_ND_ParagraphNode(List<MKDN_ND_Node> sentenceList, Integer consumed) {
     	this.sentenceList = sentenceList;
